@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+        .form-horizontal .control-label {
+            width: 130px;
+        }
+        
+        .form-horizontal .controls {
+            margin-left: 150px;
+        }
+        
+        .legend-bottom-border {
+            border-bottom: 1px solid #c6c4c4;
+        }
+        
+        .copyright {
+            float: right;
+            color: gray;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span6 ">
+                <div class="" id="loginModal">
+
+                    <div class="modal-body">
+                        <div class="well">
+
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane active in" id="login">
+                                    <form class="form-horizontal" action='' method="POST">
+                                        <fieldset>
+                                            <div id="legend">
+                                                <legend class="legend-bottom-border">Login to your account</legend>
+                                            </div>
+                                            <div class="control-group">
+                                                <!-- Username -->
+                                                <label class="control-label" for="username"><strong>Username</strong></label>
+                                                <div class="controls">
+                                                    <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                                                </div>
+                                            </div>
+
+                                            <div class="control-group">
+                                                <!-- Password-->
+                                                <label class="control-label" for="password"><b>Password</b></label>
+                                                <div class="controls">
+                                                    <input type="password" id="password" name="password" placeholder="" maxlength="8" class="input-xlarge">
+                                                </div>
+                                            </div>
+
+                                            <div class="control-group">
+                                                <!-- Button -->
+                                                <div class="controls">
+
+                                                    <button type="button" class="btn btn-primary">Sign in</button>
+                                                    <a href="https://www.google.co.in" target="_blank">Forgot password ?</a>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                    </form>
+                                    <span class="copyright">Powered by Sokrati</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('[type=password]').on('keyup', function() {
+                    var val = $(this).val();
+                    if (val.match(/[^a-zA-Z0-9]/g)) $(this).val(val.replace(/[^a-zA-Z0-9]/g, ''));
+                })
+            })
+        </script>
+</body>
+
+</html>
